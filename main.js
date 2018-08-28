@@ -104,16 +104,36 @@ function getValue(element){
    }
 
    number2="";
-   
+
 }
 
 function clear(){
   number1 = display.innerHTML = "";
+
 }
 
 
 function pourcent(){
+  number1 = Number(number1);
+  if(stockOperator === "+"){
+    number1 = display.innerHTML = number2 + number1;
+
+  }
+
+  else if(stockOperator === "-"){
+    number1 = display.innerHTML = number2 - number1;
+  }
+
+  else if(stockOperator === "/"){
+    number1 = display.innerHTML = number2 / number1;
+  }
+
+  else if(stockOperator === "*"){
+    number1 = display.innerHTML = number2 * number1;
+  }
+
   number1 = display.innerHTML = number1/100;
+  stockOperator="";
 }
 
 function back(){
